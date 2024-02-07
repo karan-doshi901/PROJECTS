@@ -1,0 +1,27 @@
+Overview
+This project aims to predict diseases based on symptoms using machine learning techniques.
+It utilizes a dataset containing information about various diseases and their associated symptoms. 
+The primary focus is on implementing two classification algorithms: Gaussian Naive Bayes and K-Nearest Neighbors (KNN).
+
+Dataset
+The dataset (Dataset asli.csv) contains information about diseases and their corresponding symptoms. 
+Upon loading the dataset, unique diseases and symptoms are extracted for further analysis and model training.
+Missing values in the dataset are handled by imputing them with the mode value of each column.
+
+Data Visualization
+Data visualization is performed using seaborn and matplotlib libraries to gain insights into the distribution of symptoms across different diseases.
+A scatter plot is generated to visualize the relationship between individual symptoms and diseases.
+
+
+Machine Learning Models
+Gaussian Naive Bayes
+A Gaussian Naive Bayes classifier is trained on the dataset after splitting it into training and testing sets. 
+The model is evaluated using performance metrics such as accuracy, precision, recall, and F1-score. Additionally, a confusion matrix and heatmap are generated to visualize the model's performance.
+https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
+
+K-Nearest Neighbors (KNN)
+A K-Nearest Neighbors classifier is implemented with a specified number of neighbors (k=32).
+Similar to Gaussian Naive Bayes, the KNN model is trained, evaluated, and visualized using the same set of performance metrics, confusion matrix, and heatmap.
+https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+
+
