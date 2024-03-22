@@ -1,1 +1,61 @@
+Lyrics Generation with Deep Learning
 
+This file contains information about code for generating song lyrics using deep learning techniques. 
+The model is trained on Taylor Swift's song lyrics dataset and can generate new lyrics based on the provided input.
+
+Introduction
+This project focuses on creating a deep learning model to generate song lyrics in the style of Taylor Swift.
+The model is built using LSTM (Long Short-Term Memory) neural networks and trained on a dataset comprising Taylor Swift's song lyrics. 
+It preprocesses the lyrics data, including removing stopwords, punctuations, and lemmatization, before training the model.
+
+**Install the required dependencies:**
+
+```
+pip install pandas matplotlib numpy nltk wordcloud keras
+```
+
+3. Download NLTK resources:
+
+```
+import nltk
+nltk.download('stopwords')
+nltk.download('wordnet')
+```
+
+## Usage
+
+The `lyrics_generation.py` script contains all the code for data preprocessing, model training, and generating lyrics.
+Here's how to use it:
+
+1. Run the script:
+
+```
+python lyrics_generation.py
+```
+
+2. The script preprocesses the lyrics data by removing stopwords, punctuations, and lemmatizing the words. 
+It then trains two LSTM models: a unidirectional LSTM model (`lyrics_generator_model1`) and a bidirectional LSTM model (`lyrics_generator_model2`).
+The trained models are saved in the current directory.
+
+3. You can then use the provided functions `predict_seq` and `pred2_seq` to generate lyrics using the trained models.
+
+## Models
+
+Two models are trained in this project:
+
+1. `lyrics_generator_model1`: A unidirectional LSTM model.
+2. `lyrics_generator_model2`: A bidirectional LSTM model.
+
+Both models are trained on the same dataset but may produce slightly different results due to architectural differences.
+
+## Contributing
+
+Contributions to this project are welcome. If you'd like to contribute, please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+This README file provides an overview of the project, how to set it up, use it, and contribute to it. It also explains the purpose of the code and the models trained within the project. Feel free to customize this README file according to your project's specific details and requirements.
